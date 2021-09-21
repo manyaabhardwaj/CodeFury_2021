@@ -13,11 +13,12 @@ window.onload = () => {
 
 function loadTableData(productData) {
     const tableBody = document.getElementById('tableData');
-    let dataHTML = '';
+    let dataHTML = "<table><tr>";
 
     for (let product of productData) {
-        dataHTML += "<tr><td>${ product.productname }</td><td>${ product.highestCurrentBid }</td><td>${ product.noOfBidders }</td><td>${ product.bidEndDate }</td><td></td></tr>";
+        dataHTML += "<td> "+product.productname +"</td><td>"+product.highestCurrentBid+ "</td><td>" +product.noOfBidders+"</td><td>"+ product.bidEndDate +"</td><td>"+"Delete"+"</td></tr>";
     }
+    dataHTML+="</tr></table>";
     console.log(dataHTML)
     tableBody.innerHTML = dataHTML;
 }
