@@ -1,6 +1,6 @@
 let sortDirection = false;
 let productData = [
-    { productname: 'Clock', highestCurrentBid: '500', noOfBidders: '8', bidEndDate: '2021-09-23' },
+    { productname: 'Clock', highestCurrentBid: '5000', noOfBidders: '8', bidEndDate: '2021-09-23' },
     { productname: 'Keyboard', highestCurrentBid: '5000', noOfBidders: '10', bidEndDate: '2021-09-28' },
     { productname: 'Charger', highestCurrentBid: '1300', noOfBidders: '1', bidEndDate: '2021-09-22' },
     { productname: 'Watch', highestCurrentBid: '4000', noOfBidders: '3', bidEndDate: '2021-09-20' },
