@@ -22,3 +22,4 @@ function loadTableData(productData) {
     console.log(dataHTML)
     tableBody.innerHTML = dataHTML;
 }
+
