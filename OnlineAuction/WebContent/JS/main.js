@@ -331,3 +331,15 @@ function validateEmail(input, requiredMsg, invalidMsg) {
 	}
 	return true;
 }
+function sendForValidation(){
+	var xhttp = new XMLHttpRequest();
+	var username = document.getElementById("user").value;
+	var password = document.getElementById("pass").value;
+	xhttp.open("POST","http://localhost:8080/OnlineAuction/login?username="+username+"&password="+password,true);
+	xhttp.send();
+	xhttp.onload = function(){
+		document.write(xhttp.responseText);
+	}
+
+
+}
