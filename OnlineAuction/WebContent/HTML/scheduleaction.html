@@ -4,14 +4,16 @@
     <meta charset="utf-8">
     <title>Schedule Action</title>
     <link rel="stylesheet" href="../CSS/Addpro.css">
+    <script src="../JS/scheduleauction.js"></script>
   </head>
   <body>
-    <form class="signup-form" action="/register" method="post">
+    <form class="signup-form" onsubmit="return submit()">
 
       <!-- form header -->
       <div class="form-header">
         <h1>Schedule Action</h1>
       </div>
+
 
       <!-- form body -->
       <div class="form-body">
@@ -32,19 +34,22 @@
         <!-- Minimum bid value -->
         <div class="form-group">
             <label for="Minimum Bid Value" class="label-title">Enter amount</label>
-            <input type="text" id="amount" class="form-input" placeholder="enter Amount" >
+            <input type="text" id="amount" class="form-input" placeholder="enter Amount" onblur="validateBidValue()">
+            <span id="amountError"> </span>
           </div>
 
           <!-- Bid start date -->
         <div class="form-group">
             <label for="Bid start date" class="label-title">Enter start date</label>
-            <input type="date" id="startdate" class="form-input" placeholder="enter date and time" >
+            <input type="date" id="startdate" class="form-input" placeholder="enter date and time" onblur="validateStartDate()">
+          <span id="startDateError"></span>
           </div>
 
            <!-- Bid End date -->
         <div class="form-group">
             <label for="Bid End date" class="label-title">Enter End date</label>
-            <input type="date" id="enddate" class="form-input" placeholder="enter date and time" >
+            <input type="date" id="enddate" class="form-input" placeholder="enter date and time" onblur="validateEndDate()">
+          <span id="endDateError"></span>
           </div>
       <!-- form-footer -->
       <div class="form-footer">
