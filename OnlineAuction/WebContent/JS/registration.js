@@ -1,18 +1,15 @@
 function validateName(){
 	var name = document.getElementById('name').value;
-	
-	if (!/^[a-zA-z]+([\s][a-zA-Z]+)*$/g.test(name)) {
-		document.getElementById('nameerror').innerHTML = "<span class='error' style='color:red'>Product Name should contain only alphabets!</span> ";
-		return false;
-	}
-	
-	if(name=="")
+	if(name==""|| name==null)
 	{
 		document.getElementById('nameerror').innerHTML="name is MUST";
 		 
 		return false;
-
-	}  if(name.length < 6 || name.length > 15){
+	}if (!/^[a-zA-z]+([\s][a-zA-Z]+)*$/g.test(name)) {
+		document.getElementById('nameerror').innerHTML = "name should contain only alphabets!";
+		return false;
+	}
+	if(name.length < 6 || name.length > 15){
 		document.getElementById('nameerror').innerHTML="length must be between 6 to 15";
 		
 		return false;
@@ -25,14 +22,19 @@ function validateName(){
 	
 }
 function validateDOB(){
-	console.log("entered");
-	var dob=document.getElementById('birthdayDate').value;
-
+	//console.log("entered");
+	var dob=document.getElementById('birthdayDate');
+console.log(dob.value)
 	if (dob == null || dob == "") {
-         console.log("entered if"+dob);
+        // console.log("entered if"+dob);
 		document.getElementById('doberror').innerHTML="Invalid Date of Birth ";
 		return false; 
 
+	}
+	if (Date.parse(dob)<18) {
+        // console.log("entered if"+dob);
+		document.getElementById('doberror').innerHTML="less than 18 ";
+		return false; 
 	}else{
 		console.log("entered dob else");
 				document.getElementById('doberror').innerHTML="";
@@ -68,9 +70,9 @@ function validatePhNum(){
 function validateUserName(){
 	var user=document.getElementById('username').value;
 	// var uname = /^[a-zA-Z0-9]+$/;
-		var uname  = /^(?=.*[a-zA-Z\d].*)[a-zA-Z\d!@#$%&*]{7,}$/;
+
+		var uname  = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 	if(!uname.test(user)){
-		console.log(username)
 		document.getElementById('usernameerror').innerHTML="Invalid User Name ";
 		 return false;
 	}else{
@@ -136,7 +138,8 @@ function validateAmount(){
 	
 	
 }
-function Validatesubmit(){    
+
+function ValidateSubmit(){    
   validateName();
 validateDOB();
 validateEmail();
@@ -154,6 +157,8 @@ validateAmount();
 	return false;
 	}
 	   else{
+
+		 alert("true validate submit ")
 		   return true;
 	}	
 }
@@ -173,28 +178,3 @@ else
 	
 }
 
-function submit(){
-	var name=document.getElementById("name").value;
-	var email=document.getElementById("email").value;
-	var username=document.getElementById("username").value;
-	var phoneNumber=document.getElementById("phoneNumber").value;
-	var password=document.getElementById("password").value;
-	var confirmpassword=document.getElementById("confirmpassword").value;
-	var birthdayDate=document.getElementById("birthdayDate").value;
-	var typeUser=document.getElementById('toUser').checked.value;
-	var address=document.getElementById("address").value;
-	var wallet=document.getElementById("walletamount").value;
-	console.log(name);
-	let xhttp = new XMLHttpRequest();
-		
-		xhttp.open("POST","http://localhost:8080/OnileAuction/register?name="+name+'&email='+email+'&username='+username+'&phoneNumber='+phoneNumber+'&password='
-		+password+'&confirmpassword='+confirmpassword+'&birthdayDate='
-		+birthdayDate+'&toUser='+typeUser+'&address='+address+'&walletamount='+wallet,true);
-		xhttp.send();
-		xhttp.onload = function(){
-			document.write(xhttp.responseText);
-			
-	
-	}
-	
-}

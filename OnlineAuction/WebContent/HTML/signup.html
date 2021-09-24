@@ -100,6 +100,7 @@
                     </div>
                 </div>
             </div>
+
         </div> 
         </div>
       </div>
@@ -115,8 +116,9 @@
             <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
               <div class="card-body p-4 p-md-5">
                 <h3 class="mb-4 pb-2 pb-md-0 mb-md-5"> <u> Registration Form</u></h3>
-                <form name="register"   >
-    
+
+                <form name="register"  action="register" method="POST"  onsubmit="return ValidateSubmit()">
+     
                   <div class="row">
                     <div class="col-md-12 mb-4">
     
@@ -133,7 +135,8 @@
                   <div class="row col-md-12 mb-4">
                       <div class="form-outline">
                         <label class="form-label" for="email">Email</label>
-                        <input type="text" id="email" class="form-control form-control-lg" placeholder="Enter email " onblur="validateEmail()" />
+
+                        <input type="text" id="email" name = "email" class="form-control form-control-lg" placeholder="Enter email " onblur="validateEmail()" />
                         <span id="emailerror"></span>
                         <small></small>
                       </div>
@@ -141,7 +144,7 @@
                   <div class="row col-md-12 mb-4">
                     <div class="form-outline">
                       <label class="form-label" for="username">Username</label>
-                      <input type="text" id="username" class="form-control form-control-lg" placeholder="Enter username" onblur="validateUserName()"/>
+                      <input type="text" id="username" name = "username" class="form-control form-control-lg" placeholder="Enter username" onblur="validateUserName()"/>
                       <span id="usernameerror"></span>
                       <small></small>
                     </div>
@@ -152,7 +155,8 @@
   
                     <div class="form-outline"> 
                       <label class="form-label" for="phoneNumber">Phone Number</label>
-                      <input type="tel" id="phoneNumber" class="form-control form-control-lg" placeholder="Enter phone number"  onblur="validatePhNum()" />
+
+                      <input type="tel" id="phoneNumber" name = "phoneNumber" class="form-control form-control-lg" placeholder="Enter phone number"  onblur="validatePhNum()" />
                       <span id="phonenumbererror"></span>
                       <small></small>
                      
@@ -165,7 +169,8 @@
   
                     <div class="form-outline">
                       <label class="form-label" for="password">Password</label>
-                      <input type="password" id="password" class="form-control form-control-lg" placeholder="Enter password" onblur="validatePassword()" />
+
+                      <input type="password" id="password" name = "password" class="form-control form-control-lg" placeholder="Enter password" onblur="validatePassword()" />
                       <span id="passworderror"></span>
                       <small></small>
                     </div>
@@ -175,7 +180,8 @@
   
                     <div class="form-outline">
                       <label class="form-label" for="confirmpassword">Confirm Password</label>
-                      <input type="password" id="confirmpassword" class="form-control form-control-lg"  placeholder="Re-enter password" onblur="validateConfPassword()" />
+
+                      <input type="password" id="confirmpassword" name = "confirmpassword" class="form-control form-control-lg"  placeholder="Re-enter password" onblur="validateConfPassword()" />
                       <span id="Confpasserror"></span>
                       <small></small>
                     </div>
@@ -190,7 +196,8 @@
                         <input
                           type="date"
                           class="form-control form-control-lg"
-                          id="birthdayDate" placeholder="Enter Date of Birth " onchange="validateDOB()"
+
+                          id="birthdayDate" name = "birthdayDate" placeholder="Enter Date of Birth " onchange="validateDOB()"
                         />
                          <span id="doberror"></span>
                         <small></small>
@@ -234,7 +241,8 @@
   <label><input type="radio" name="inlineRadioOptions" id="buy"  value="buyer" checked onchange ="validateTypeOfUser()">Buyer</label>
 </div>
 <div class="form-check form-check-inline">
-  <label><input type="radio"  name="inlineRadioOptions"  id="sell"  value="seller" onchange ="validateTypeOfUser()">Seller</label>
+
+  <label><input type="radio"  name="inlineRadioOptions"  id="sell"   value="seller" onchange ="validateTypeOfUser()">Seller</label>
 </div>
 
      
@@ -246,7 +254,8 @@
   
                     <div class="form-outline">
                       <label class="form-label" for="address">Address</label>
-                      <input type="textarea" id="address" class="form-control form-control-lg" placeholder="Enter address" />
+
+                      <input type="textarea" id="address" name = "address" class="form-control form-control-lg" placeholder="Enter address" />
                       <small></small>
                     </div>
   
@@ -255,14 +264,16 @@
   
                     <div class="form-outline">
                       <label class="form-label" for="walletamount">Wallet Amount</label>
-                      <input type="password" id="walletamount" class="form-control form-control-lg" placeholder="Enter Wallet Amount" onblur="validateAmount()"/><small></small>
+
+                      <input type="text" id="walletamount" name = "walletamount" class="form-control form-control-lg" placeholder="Enter Wallet Amount" onblur="validateAmount()"/><small></small>
                         <span id="walleterror"></span>
                     </div>
   
                   </div>
                 </div>
                   <div class="mt-4 pt-2">
-                    <input class="btn btn-primary btn-lg" type="submit" value="Submit" id = "submitbuttom" onclick="submit()"/>
+
+                    <input class="btn btn-primary btn-lg" type="submit" value="Submit" id = "submitbuttom"  />
                                            <span id="amounterror"></span>
   
                   </div>
