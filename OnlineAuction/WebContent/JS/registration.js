@@ -5,7 +5,6 @@ function validateName(){
 		document.getElementById('nameerror').innerHTML="name is MUST";
 		 
 		return false;
-
 	}if (!/^[a-zA-z]+([\s][a-zA-Z]+)*$/g.test(name)) {
 		document.getElementById('nameerror').innerHTML = "name should contain only alphabets!";
 		return false;
@@ -36,7 +35,6 @@ console.log(dob.value)
         // console.log("entered if"+dob);
 		document.getElementById('doberror').innerHTML="less than 18 ";
 		return false; 
-
 	}else{
 		console.log("entered dob else");
 				document.getElementById('doberror').innerHTML="";
@@ -72,9 +70,9 @@ function validatePhNum(){
 function validateUserName(){
 	var user=document.getElementById('username').value;
 	// var uname = /^[a-zA-Z0-9]+$/;
+
 		var uname  = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 	if(!uname.test(user)){
-		
 		document.getElementById('usernameerror').innerHTML="Invalid User Name ";
 		 return false;
 	}else{
@@ -140,6 +138,7 @@ function validateAmount(){
 	
 	
 }
+
 function ValidateSubmit(){    
   validateName();
 validateDOB();
@@ -158,9 +157,9 @@ validateAmount();
 	return false;
 	}
 	   else{
+
 		 alert("true validate submit ")
 		   return true;
-		  
 	}	
 }
 function success()
@@ -179,26 +178,3 @@ else
 	
 }
 
-/*function submit(){
-	var name=document.getElementById("name").value;
-	/*var email=document.getElementById("email").value;
-	var username=document.getElementById("username").value;
-	var phoneNumber=document.getElementById("phoneNumber").value;
-	var password=document.getElementById("password").value;
-	var confirmpassword=document.getElementById("confirmpassword").value;
-	var birthdayDate=document.getElementById("birthdayDate").value;
-	var typeUser=document.getElementById('toUser').checked.value;
-	var address=document.getElementById("address").value;
-	var wallet=document.getElementById("walletamount").value;
-	console.log(name);
-	let xhttp = new XMLHttpRequest();
-		
-		xhttp.open("POST","http://localhost:8080/js/register?name="+name,true);
-		xhttp.send();
-		xhttp.onload = function(){
-			document.write(xhttp.responseText);
-			
-	
-	
-	
-*/
