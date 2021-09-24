@@ -1,72 +1,80 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Add Product</title>
-    <link rel="stylesheet" href="../CSS/AddPro.css">
-  </head>
-  <body>
-    <form class="signup-form" action="/register" method="post">
+<head>
+<meta charset="utf-8">
+<title>Add Product</title>
+<link rel="stylesheet" href="../CSS/AddPro.css">
+<script src="../JS/addproduct.js"></script>
+</head>
+<body>
+	<form class="signup-form" action="add" method="post" onsubmit="return success()" >
 
-      <!-- form header -->
-      <div class="form-header">
-        <h1>Add Product</h1>
-      </div>
+		<!-- form header -->
+		<div class="form-header">
+			<h1>Add Product</h1>
+		</div>
 
-      <!-- form body -->
-      <div class="form-body">
-        <!-- productname-->
-        <div class="form-group">
-            <label for="Product name" class="label-title">Product Name </label>
-            <input type="text" id="Product name" class="form-input" placeholder="enter product name"  />
-          </div>
+		<!-- form body -->
+		<div class="form-body">
+			<!-- productname-->
+			<div class="form-group">
+				<label for="Product name" class="label-title">Product Name </label>
+				<input type="text" id="Product name" class="form-input" name="productname"
+					placeholder="enter product name" onkeyup="convertToUpperCase()" onblur="validateProductName()"/><span id="productNameError"></span>
+			</div>
 
-        <!-- product price -->
-        <div class="form-group">
-          <label for="price" class="label-title">Price</label>
-          <input type="text" id="Price" class="form-input" placeholder="enter price" >
-        </div>
+			<!-- product price -->
+			<div class="form-group">
+				<label for="price" class="label-title">Price</label> <input
+					type="text" id="Price" class="form-input" name="price" placeholder="enter price" onblur="validateProductPrice()"><span
+					id="productPriceError"></span>
+			</div>
 
-        <!-- quantity -->
-        <div class="form-group">
-            <label for="Quantity" class="label-title">Quantity</label>
-            <input type="text" id="Quantity" class="form-input" placeholder="enter Quantity" >
-          </div>
+			<!-- quantity -->
+			<div class="form-group">
+				<label for="Quantity" class="label-title">Quantity</label> <input
+					type="text" id="Quantity" class="form-input" name="quantity"
+					placeholder="enter Quantity" onblur="validateQuantity()"><span
+					id="productQuantity"></span>
+					
+			</div>
 
 
-        <!-- product category -->
-        
-          <div class="form-group" >
-            <label class="label-title">Product Category</label>
-            <select class="form-input" id="level" >
-              <option value="B">Furniture</option>
-              <option value="I">chairs</option>
-              <option value="A">Laptops</option>
-            </select>
-          </div>
+			<!-- product category -->
 
-        <!-- upload product picture -->
-        
-          <div class="form-group" >
-            <label for="choose-file" class="label-title">Upload Product Picture</label>
-            <input type="file" id="choose-file" size="80">
-          </div>
-    
+			<div class="form-group">
+				<label class="label-title">Product Category</label> <select
+					class="form-input" id="level" name="productcategory">
+					<option value="B">Furniture</option>
+					<option value="I">chairs</option>
+					<option value="A">Laptops</option>
+				</select>
+			</div>
 
-        <!-- product description -->
-        <div class="form-group">
-          <label for="choose-file" class="label-title">Product Description</label>
-          <textarea class="form-input" rows="4" cols="50" style="height:auto"></textarea>
-        </div>
-    
+			<!-- upload product picture -->
 
-      <!-- form-footer -->
-      <div class="form-footer">
-        <button type="submit" class="btn">Submit</button>
-      </div>
+			<div class="form-group">
+				<label for="choose-file" class="label-title">Upload Product
+					Picture</label> <input name="productpicture" type="file" id="choose-file" size="80">
+			</div>
 
-    </form>
 
-  </body>
+			<!-- product description -->
+			<div class="form-group">
+				<label for="choose-file" class="label-title">Product
+					Description</label>
+				<textarea id="description" name="productdescription" class="form-input" rows="4" cols="50" style="height: auto" onblur="validateDescription()"></textarea>
+			<span
+					id="productDescriptionError"></span>
+			</div>
+
+             
+			<!-- form-footer -->
+			<div class="form-footer">
+				<input class="btn" type="submit" value="Submit" />
+			</div>
+	</form>
+
+</body>
 </html>
 
