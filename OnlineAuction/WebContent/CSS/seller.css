@@ -167,7 +167,20 @@ body{
 }
 .wrapper .left{
     width: 35%;
-    background: linear-gradient(to right, #01a9ac, #01dbdf);
+       background: hsla(221, 45%, 73%, 1);
+
+background: linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#9BAFD9", endColorstr="#103783", GradientType=1 );
+    padding: 30px, 25px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+    color: #fff;
     padding: 30px, 25px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
