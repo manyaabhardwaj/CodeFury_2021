@@ -1,30 +1,15 @@
 function validateName(){
 	var name = document.getElementById('name').value;
-<<<<<<< HEAD
 	if(name==""|| name==null)
-=======
-	
-	if (!/^[a-zA-z]+([\s][a-zA-Z]+)*$/g.test(name)) {
-		document.getElementById('nameerror').innerHTML = "<span class='error' style='color:red'>Product Name should contain only alphabets!</span> ";
-		return false;
-	}
-	
-	if(name=="")
->>>>>>> 30a38a78a74ca10653b4be29a0f962624df935f0
 	{
 		document.getElementById('nameerror').innerHTML="name is MUST";
 		 
 		return false;
-<<<<<<< HEAD
 	}if (!/^[a-zA-z]+([\s][a-zA-Z]+)*$/g.test(name)) {
 		document.getElementById('nameerror').innerHTML = "name should contain only alphabets!";
 		return false;
 	}
 	if(name.length < 6 || name.length > 15){
-=======
-
-	}  if(name.length < 6 || name.length > 15){
->>>>>>> 30a38a78a74ca10653b4be29a0f962624df935f0
 		document.getElementById('nameerror').innerHTML="length must be between 6 to 15";
 		
 		return false;
@@ -50,10 +35,6 @@ console.log(dob.value)
         // console.log("entered if"+dob);
 		document.getElementById('doberror').innerHTML="less than 18 ";
 		return false; 
-<<<<<<< HEAD
-=======
-
->>>>>>> 30a38a78a74ca10653b4be29a0f962624df935f0
 	}else{
 		console.log("entered dob else");
 				document.getElementById('doberror').innerHTML="";
@@ -89,15 +70,9 @@ function validatePhNum(){
 function validateUserName(){
 	var user=document.getElementById('username').value;
 	// var uname = /^[a-zA-Z0-9]+$/;
-<<<<<<< HEAD
 
 		var uname  = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 	if(!uname.test(user)){
-=======
-		var uname  = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-	if(!uname.test(user)){
-		
->>>>>>> 30a38a78a74ca10653b4be29a0f962624df935f0
 		document.getElementById('usernameerror').innerHTML="Invalid User Name ";
 		 return false;
 	}else{
@@ -163,12 +138,8 @@ function validateAmount(){
 	
 	
 }
-<<<<<<< HEAD
 
 function ValidateSubmit(){    
-=======
-function Validatesubmit(){    
->>>>>>> 30a38a78a74ca10653b4be29a0f962624df935f0
   validateName();
 validateDOB();
 validateEmail();
@@ -186,11 +157,8 @@ validateAmount();
 	return false;
 	}
 	   else{
-<<<<<<< HEAD
 
 		 alert("true validate submit ")
-=======
->>>>>>> 30a38a78a74ca10653b4be29a0f962624df935f0
 		   return true;
 	}	
 }
@@ -210,31 +178,3 @@ else
 	
 }
 
-<<<<<<< HEAD
-=======
-function submit(){
-	var name=document.getElementById("name").value;
-	var email=document.getElementById("email").value;
-	var username=document.getElementById("username").value;
-	var phoneNumber=document.getElementById("phoneNumber").value;
-	var password=document.getElementById("password").value;
-	var confirmpassword=document.getElementById("confirmpassword").value;
-	var birthdayDate=document.getElementById("birthdayDate").value;
-	var typeUser=document.getElementById('toUser').checked.value;
-	var address=document.getElementById("address").value;
-	var wallet=document.getElementById("walletamount").value;
-	console.log(name);
-	let xhttp = new XMLHttpRequest();
-		
-		xhttp.open("POST","http://localhost:8080/OnileAuction/register?name="+name+'&email='+email+'&username='+username+'&phoneNumber='+phoneNumber+'&password='
-		+password+'&confirmpassword='+confirmpassword+'&birthdayDate='
-		+birthdayDate+'&toUser='+typeUser+'&address='+address+'&walletamount='+wallet,true);
-		xhttp.send();
-		xhttp.onload = function(){
-			document.write(xhttp.responseText);
-			
-	
-	}
-	
-}
->>>>>>> 30a38a78a74ca10653b4be29a0f962624df935f0
