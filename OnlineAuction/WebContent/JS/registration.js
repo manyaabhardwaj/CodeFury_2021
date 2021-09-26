@@ -2,15 +2,15 @@ function validateName(){
 	var name = document.getElementById('name').value;
 	if(name==""|| name==null)
 	{
-		document.getElementById('nameerror').innerHTML="name is MUST";
+		document.getElementById('nameerror').innerHTML="Name is a mandatory field!";
 		 
 		return false;
 	}if (!/^[a-zA-z]+([\s][a-zA-Z]+)*$/g.test(name)) {
-		document.getElementById('nameerror').innerHTML = "name should contain only alphabets!";
+		document.getElementById('nameerror').innerHTML = "Name should contain only alphabets!";
 		return false;
 	}
 	if(name.length < 6 || name.length > 15){
-		document.getElementById('nameerror').innerHTML="length must be between 6 to 15";
+		document.getElementById('nameerror').innerHTML="Length must be between 6 to 15!";
 		
 		return false;
 	}else{
@@ -27,13 +27,13 @@ function validateDOB(){
 console.log(dob.value)
 	if (dob == null || dob == "") {
         // console.log("entered if"+dob);
-		document.getElementById('doberror').innerHTML="Invalid Date of Birth ";
+		document.getElementById('doberror').innerHTML="Invalid Date of Birth!";
 		return false; 
 
 	}
 	if (Date.parse(dob)<18) {
         // console.log("entered if"+dob);
-		document.getElementById('doberror').innerHTML="less than 18 ";
+		document.getElementById('doberror').innerHTML="less than 18! ";
 		return false; 
 	}else{
 		console.log("entered dob else");
@@ -47,7 +47,7 @@ function validateEmail(){
     var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
     if (!filter.test(email)) {
-	document.getElementById('emailerror').innerHTML="Invalid Email address ";
+	document.getElementById('emailerror').innerHTML="Please enter a valid Email address! ";
 		return false; 
 	}else{
 				document.getElementById('emailerror').innerHTML="";
@@ -59,7 +59,7 @@ function validatePhNum(){
 	var pnum=document.getElementById('phoneNumber').value;
 	var num=/^\d{10}$/;
 	if(!num.test(pnum)){
-		document.getElementById('phonenumbererror').innerHTML="Invalid Phone Number ";
+		document.getElementById('phonenumbererror').innerHTML="Please enter a valid Phone Number! ";
 		return false; 
 	}else{
 				document.getElementById('phonenumbererror').innerHTML="";
@@ -85,7 +85,7 @@ function validatePassword(){
 	var password = document.getElementById("password").value;
 	console.log(password);
         if(password=="" ){
-	document.getElementById('passworderror').innerHTML="Password cant be empty ";
+	document.getElementById('passworderror').innerHTML="Password cant be empty !";
 		return false;
 }	
        else{
@@ -97,11 +97,11 @@ function validateConfPassword(){
 	   var confirmPassword = document.getElementById("confirmpassword").value;
 	   var password = document.getElementById("password").value;
         if (password != confirmPassword) {
-            document.getElementById('Confpasserror').innerHTML="Pass word doesn't matches' ";
+            document.getElementById('Confpasserror').innerHTML="Both Password doesn't match ";
 	return false; 
         }
         	if( confirmPassword==""){
-	document.getElementById('Confpasserror').innerHTML="Password cant be empty ";
+	document.getElementById('Confpasserror').innerHTML="Password cant be empty! ";
 		return false;
 
 }
@@ -129,7 +129,7 @@ function validateAmount(){
 	var amount=document.getElementById('walletamount').value;
 	var valid = /^[0-9]+$/;
 	if(!valid.test(amount)){
-		document.getElementById('walleterror').innerHTML="Invalid Amount ";
+		document.getElementById('walleterror').innerHTML="Invalid Amount !";
 		return false; 
 	}else{
 				document.getElementById('walleterror').innerHTML="";

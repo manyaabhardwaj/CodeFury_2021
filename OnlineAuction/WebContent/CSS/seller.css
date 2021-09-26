@@ -159,11 +159,7 @@ body{
 }
 .wrapper .left{
     width: 35%;
-<<<<<<< HEAD
-       background: hsla(221, 45%, 73%, 1);
-=======
     background: hsla(221, 45%, 73%, 1);
->>>>>>> 30a38a78a74ca10653b4be29a0f962624df935f0
 
 background: linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
 
@@ -172,14 +168,6 @@ background: -moz-linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%
 background: -webkit-linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
 
 filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#9BAFD9", endColorstr="#103783", GradientType=1 );
-<<<<<<< HEAD
-    padding: 30px, 25px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    text-align: center;
-    color: #fff;
-=======
->>>>>>> 30a38a78a74ca10653b4be29a0f962624df935f0
     padding: 30px, 25px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;

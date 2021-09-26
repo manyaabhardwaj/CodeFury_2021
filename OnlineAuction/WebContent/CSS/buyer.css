@@ -124,11 +124,7 @@ section{
     align-items: center;
     scroll-snap-align: start;
 }
-.container1{
-	scroll-snap-type: y mandatory;
-	overflow-y: scroll;
-	
-}
+
 .two{
 	height: 100vh;
 	display: grid;
@@ -179,8 +175,7 @@ body{
     height: 450px;
     display: flex;
     box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
-	grid-column-start: 2;
-	grid-column-end: 3;
+
 }
 .wrapper .left{
     width: 35%;
@@ -200,7 +195,9 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#9BAFD9", en
     color: #fff;
 }
 .wrapper .left img{
-    margin-bottom: 10px;
+
+	margin-top: 20px;
+    margin-bottom: 20px;
     border-radius: 5px;
 }
 .wrapper .left h4{
@@ -209,6 +206,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#9BAFD9", en
 .wrapper .left p{
     font-size: 20px;
 }
+.clear { clear: both; height: 60px; }
 .wrapper .right{
     width: 65%;
     background: #fff;
@@ -268,13 +266,4 @@ main{
 }
 .one{
 	height: 100vh;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
-}
-.text{
-	grid-column-start: 1;
-	grid-column-end: 2;
-	text-align: center;
-		
 }

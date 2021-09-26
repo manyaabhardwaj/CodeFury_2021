@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
- <title>Profile</title> 
+ <title>Schedule Auction</title> 
   <meta content="" name="description">
   <meta content="" name="keywords">
  <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
   <!-- Favicons -->
-  <link href="../images/favicon.png" rel="icon">
-  <link href="../images/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -26,7 +26,7 @@
   <link href="../vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="../CSS/style.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Vesperr - v4.4.0
@@ -35,10 +35,10 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 
-    <link rel="stylesheet" href="../CSS/profile.css">
+    <link rel="stylesheet" href="../css/AddPro.css">
   </head>
-<body>
-  <!-- ======= Header ======= -->
+  <body>
+     <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
@@ -67,44 +67,58 @@
 
     </div>
   </header>
-<section>
+    <section>
+    <form class="signup-form" onsubmit="return submit()">
 
-    <div class="wrapper">
-        <div class="left">
-            <img src="../images/user-icons.png" alt="user" width="100">
-            <h4 class="name">name</h4>
-            <p class="unique-id">122342</p>
-        </div>
-        <div class="right">
-            <div class="info">
-                <h3>Account Information</h3>
-                <div class="info-data">
-                    <div class="data">
-                        <h4>Email-Id</h4>
-                        <p class="email-id">alexbruce@gmail.com</p>
-                    </div>
-                    <div class="data">
-                        <h4>Phone</h4>
-                        <p class="phone">9999988888</p>
-                    </div>
-                </div>
-            </div>
-            <div class="info2">
-                <h3>Wallet Information</h3>
-                <div class="info-data2">
-                    <div class="data2">
-                        <h4>Wallet Cash</h4>
-                        <p class="wallet-cash">2000</p>
-                    </div>
-                    <!-- <div class="data">
-                        <h4>Phone</h4>
-                        <p class="phone">9999988888</p>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-    </div>
-    </section>
+      <!-- form header -->
+      <div class="form-header">
+        <h1>Schedule Auction</h1>
+      </div>
+
+
+      <!-- form body -->
+      <div class="form-body">
+
+
+        <!-- product category -->
+        
+          <div class="form-group" >
+            <label class="label-title">Product Name</label>
+            <select class="form-input" id="level" >
+              <option value="B">one</option>
+              <option value="I">two</option>
+              <option value="A">three</option>
+            </select>
+          </div>
+
+          
+        <!-- Minimum bid value -->
+        <div class="form-group">
+            <label for="Minimum Bid Value" class="label-title">Enter amount</label>
+            <input type="text" id="amount" class="form-input" placeholder="enter Amount" onblur="validateBidValue()">
+            <span  style="color:red" id="amountError"> </span>
+          </div>
+
+          <!-- Bid start date -->
+        <div class="form-group">
+            <label for="Bid start date" class="label-title">Enter start date</label>
+            <input type="date" id="startdate" class="form-input" placeholder="enter date and time" onblur="validateStartDate()">
+          <span style="color:red" id="startDateError"></span>
+          </div>
+
+           <!-- Bid End date -->
+        <div class="form-group">
+            <label for="Bid End date" class="label-title">Enter End date</label>
+            <input type="date" id="enddate" class="form-input" placeholder="enter date and time" onblur="validateEndDate()">
+          <span style="color:red"  id="endDateError"></span>
+          </div>
+      <!-- form-footer -->
+      <div class="form-footer">
+        <button type="submit" class="btn">Submit</button>
+      </div>
+
+    </form>
+</section>
    <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
@@ -114,10 +128,7 @@
             &copy; Copyright <strong>Vesperr</strong>. All Rights Reserved
           </div>
           <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/vesperr-free-bootstrap-template/ -->
+           
             Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
           </div>
         </div>
@@ -143,9 +154,7 @@
   <script src="../vendor/purecounter/purecounter.js"></script>
   <script src="../vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Template Main JS File -->
-<!--   <script src="../JS/main.js"></script> -->
-<!--      <script src="../JS/buyer.js"></script> -->
-</body>
-
+  <script src="../JS/scheduleauction.js"></script>
+  </body>
 </html>
+

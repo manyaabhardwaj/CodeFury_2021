@@ -68,7 +68,7 @@
     </div>
   </header>
   <section>
-  <form class="signup-form" action="add" method="post">
+  <form class="signup-form" action="/register" method="post">
 
       <!-- form header -->
       <div class="form-header">
@@ -80,21 +80,21 @@
         <!-- productname-->
         <div class="form-group">
             <label for="Product name" class="label-title">Product Name </label>
-            <input type="text" id="Product name" class="form-input" placeholder="enter product name" name="productname" onkeyup="convertToUpperCase()" onblur="validateProductName()"/><span id="productNameError" /></span>
+            <input type="text" name="productname" id="Product name" class="form-input" placeholder="enter product name" onkeyup="convertToUpperCase()" onblur="validateProductName()"/><span id="productNameError"></span>
           </div>
 
         <!-- product price -->
         <div class="form-group">
           <label for="price" class="label-title">Price</label>
-          <input type="text" id="Price" class="form-input" placeholder="enter price" name="price" onblur="validateProductPrice()"><span
+          <input type="text" id="Price" class="form-input" name="price" placeholder="enter price" onblur="validateProductPrice()"><span
 					id="productPriceError"></span>
         </div>
 
         <!-- quantity -->
         <div class="form-group">
             <label for="Quantity" class="label-title">Quantity</label>
-            <input type="text" id="Quantity" class="form-input" placeholder="enter Quantity" name="quantity"onblur="validateQuantity()"><span
-					id="productQuantity"></span>
+            <input type="text" id="Quantity"  name="quantity" class="form-input" placeholder="enter Quantity"  onblur="validateQuantity()"><span
+            id="productQuantity"></span>
           </div>
 
 
@@ -102,7 +102,7 @@
         
           <div class="form-group" >
             <label class="label-title">Product Category</label>
-            <select class="form-input" id="level" name="productcategory">
+            <select class="form-input" id="level" name="productcategory" >
               <option value="B">Furniture</option>
               <option value="I">chairs</option>
               <option value="A">Laptops</option>
@@ -113,22 +113,22 @@
         
           <div class="form-group" >
             <label for="choose-file" class="label-title">Upload Product Picture</label>
-            <input type="file"name="productpicture" id="choose-file" size="80">
+            <input type="file" name="productpicture" id="choose-file" size="80">
           </div>
     
 
         <!-- product description -->
         <div class="form-group">
           <label for="choose-file" class="label-title">Product Description</label>
-          <textarea class="form-input" id="description" name="productdescription" rows="4" cols="50" style="height:auto"onblur="validateDescription()"></textarea>
+          <textarea class="form-input" name="productdescription" rows="4" cols="50" style="height:auto"onblur="validateDescription()"></textarea>
+          <span
+              id="productDescriptionError"></span>
         </div>
-			<span
-					id="productDescriptionError"></span>
     
 
       <!-- form-footer -->
       <div class="form-footer">
-        <button class="btn" type="submit" value="Submit">Submit</button>
+        <button type="submit" class="btn">Submit</button>
       </div>
 
     </form></section>
@@ -171,8 +171,9 @@
   <script src="../vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Template Main JS File -->
-<!--   <script src="../JS/main.js"></script> -->
-<!--      <script src="../JS/buyer.js"></script> -->
+<!--   <script src="../js/main.js"></script> -->
+<!--      <script src="../js/buyer.js"></script> -->
+<script src="../JS/addproduct.js"></script> 
   </body>
 </html>
 
